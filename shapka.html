@@ -1,0 +1,41 @@
+<nav class="navbar bg-dark" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ПРО PRO</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Переключатель навигации"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"
+              >Главная</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="biog.html">Биография</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Творческие проекты</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</nav>
+
+document.addEventListener('DOMContentLoaded', function() { fetch('shapka.html')
+.then(response => { // Проверяем успешность запроса if (!response.ok) { throw
+new Error(HTTP error! status: ${response.status}); } return response.text(); })
+.then(data => { // Вставляем содержимое header.html в элемент с id="header"
+document.getElementById('header').innerHTML = data; }) .catch(error => {
+console.error('Ошибка загрузки шапки:', error);
+document.getElementById('header').innerHTML = 'Ошибка загрузки шапки'; }); });
